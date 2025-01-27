@@ -26,6 +26,16 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <script type="text/javascript">
+    var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+    if (mobile) {
+      alert("MOBILE DEVICE!!");
+      $('.cpmtitle').css('display', 'none'); // OR you can use $('.navWrap').hide();
+    }
+    else {
+      alert("NOT A MOBILE DEVICE!!");
+    }
+  </script>
 </head>
 
 <body>
@@ -42,7 +52,7 @@
       <div class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container "> <a class="navbar-brand" href="index.html"> <span>
-                <img src="images/cpmlog.png">Complete Property Maintenance (CPM)</span></a>
+                <img src="images/cpmlog.png"><span name="cpmtitle">Complete Property Maintenance (CPM)</span></span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
                 class=""> </span> </button>
